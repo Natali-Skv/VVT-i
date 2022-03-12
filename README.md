@@ -19,8 +19,8 @@
 ## 📝 Content table
   
 -  [About project](#about)
-  
--  [Library installing](#library_installing)
+
+-  [Usecase gifs](#gifs)
 
 -  [Launching the application](#getting_started)
 
@@ -41,75 +41,36 @@
   
 ## 🧐 About project<a name = "about"></a>
 
-  В последнее время наш вуз активно переходит на семейство ОС Linux, однако распространенных решений для удаленного хранения файлов для них не существует. Помимо этого, многие существующие решения требуют обязательную регистрацию, что является проблемой для пользователей, не имеющих с собой паролей. Также возможна утечка личной информации в случае, если пользователь забывает выйти из аккаунта.
-  
+Большинство студентов нашего ВУЗа встречались с такой проблемой: пришел на лабы по программированию, например, даже выполнил её на университетском компьютере, но забыл флешку... тогда приходится выходить в интернет и авторизовываться в соцсети/почте/облачном хранилище, чтобы закинуть свою лабу -- довольно долго, так еще и можно не помнить пароль или забыть выйти из своего аккаунта.
+
+**Наша дружная команда объединила усилия для решения этой проблемы!**
+
   Решением этой проблемы является создание продукта, который будет максимально простым в использовании и предусматривать работу с неавторизованными пользователями.
   
-Наш проект удовлетворяет этим требованиям. Он имеет Linux-friendly синтаксис команд, что также упрощает пользование продуктом. Помимо этого, для удобства пользования используется отправка уведомлений на почту, указанную пользователем. Это помогает ему не хранить код извне, а получить его в удобной пользователю момент через почту.
+Наш проект удовлетворяет этим требованиям. Он имеет Linux-friendly синтаксис команд, что также упрощает взаимодействие с продуктом. Помимо этого, для удобства пользования используется отправка уведомлений на почту, указанную пользователем. Это помогает ему не хранить код извне, а получить его в удобной пользователю момент через почту.
   <br>
 <br>
-
+  ## :red_circle: the "master" branch contains the server side code, and the "client" branch contains the client side code
+ <br>
   
-
-## 📚 Libraries installing <a name = "library_installing"></a>
+## Usecases gifs<a name = "gifs"></a> 
   
-- Установка PostgreSQL & LibPQXX:
-```
-  sudo apt install postgresql postgresql-contrib
+  - сценарий работы неавторизованного пользователя (код для олучения файла отправляется пользователю на почту)
+![alt-text](https://github.com/Natali-Skv/VVT-i/blob/master/gifs_for_README/unauth.gif) 
   
-  sudo apt install libpqxx-dev
-```
+  - сценарий регистрации, логина и логаута пользователя
+![alt-text](https://github.com/Natali-Skv/VVT-i/blob/master/gifs_for_README/login_logout.gif) 
   
-- Установка fmt:
-```
-  sudo add-apt-repository universe
+  - сценарий работы авторизованного пользователя (загрузка и скачивание файла)
+![alt-text](https://github.com/Natali-Skv/VVT-i/blob/master/gifs_for_README/auth.gif) 
   
-  sudo apt update
+  - сценарий работы авторизованного пользователя (создание директорий)
+![alt-text](https://github.com/Natali-Skv/VVT-i/blob/master/gifs_for_README/mkdir_rmdir.gif) 
   
-  sudo apt install libfmt-dev
-```
-
-- Установка Boost:
-```
-  sudo apt-get install libboost-all-dev
-```
+  - сценарий работы авторизованного пользователя (переход по директориям)
+![alt-text](https://github.com/Natali-Skv/VVT-i/blob/master/gifs_for_README/ls_cd.gif) 
   
-- Установка Mailio:
-```
-  git clone git://github.com/karastojko/mailio
-
-  cd mailio
-
-  mkdir build
-
-  cd build
-
-  cmake ..
-
-  sudo make install
-```
-
-- Установка OpenSSL & JWT:
-```
-  sudo apt install nlohmann-json3-dev 
-  
-  sudo apt install libgtest-dev
-  
-  sudo apt install libssl-dev
-  
-  mkdir build
-  
-  cd build
-  
-  cmake ..
-  
-  cmake --build . -j
-  
-  sudo make install
-```
-<br>
-  
-  
+   <br>
   
 ## 🏁 Launching the application <a name = "getting_started"></a>
 
@@ -160,17 +121,21 @@
 
 [PostgreSQL](https://www.postgresql.org/) - Database
   
+[Fmt](https://github.com/fmtlib/fmt) - Formatting library
+  
 [LibPQXX](http://pqxx.org/development/libpqxx/) - The C++ connector for PostgreSQL
   
 [Boost](https://www.boost.org/) - Multiprocessing Logging & gzip file compression
   
 [Epoll](https://ru.wikipedia.org/wiki/Epoll) - Asynchronous Multiplex Technology
   
-[JWT](https://jwt.io/) - JWT Authorization Technology
+[JWT++](https://github.com/arun11299/cpp-jwt) - JWT Authorization Technology
   
 [Mailio](https://github.com/karastojko/mailio) - Send Emails Module
 
 [LIBMAGIC](https://man7.org/linux/man-pages/man3/libmagic.3.html) - Getting file type for compression
+
+[OpenSSL](https://www.openssl.org/) 
   <br>
 <br>
   
@@ -185,14 +150,13 @@
 
   
 ## ✍️ Developers <a name = "developers"></a>
+[@skvortsova_na](https://github.com/Natali-Skv) - Скворцова Наталья [Filesystem development & Server development]
   
-[@And_Dayk](https://github.com/Andrey123815) - Дьяконов Андрей [Team Lead, Database development]
+[@And_Dayk](https://github.com/Andrey123815) - Дьяконов Андрей [Database development]
   
 [@kirill555101](https://github.com/kirill555101) - Каташинский Кирилл [Server development]
   
 [@yut_fut](https://github.com/yutfut) - Голубев Сергей [Team Lead, Client development]
-  
-[@skvortsova_na](https://github.com/Natali-Skv) - Скворцова Наталья [Filesystem development & Integration Db and FS to server]
   <br>
 <br>
 
